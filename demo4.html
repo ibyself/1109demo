@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>复仇者联盟-3d效果</title>
+	<style>
+		html{perspective:800px;}
+		.cube{width:200px;height:200px;margin:100px auto;animation:rotate 20s linear infinite;transform-style:preserve-3d;}
+		.cube>div{width:200px;height:200px;position:absolute;opacity:.7;}
+		.cube img{vertical-align:top;}
+		.cube .n1{transform:rotateX(90deg) translateZ(100px);}
+		.cube .n2{transform:rotateX(-90deg) translateZ(100px);}
+		.cube .n3{transform:rotateY(90deg) translateZ(100px);}
+		.cube .n4{transform:rotateY(-90deg) translateZ(100px);}
+		.cube .n5{transform:rotateY(180deg) translateZ(100px);}
+		.cube .n6{transform:rotateY(0) translateZ(100px);}
+		@keyframes rotate{
+			from{transform:rotateZ(0) rotateX(0);}
+			to{transform:rotateZ(360deg) rotateX(1turn);}
+		}
+	</style>
+</head>
+<body>
+	<div class="cube">
+		<div class="n1"><img src="img/4/1.jpg" alt=""></div>
+		<div class="n2"><img src="img/4/2.jpg" alt=""></div>
+		<div class="n3"><img src="img/4/3.jpg" alt=""></div>
+		<div class="n4"><img src="img/4/4.jpg" alt=""></div>
+		<div class="n5"><img src="img/4/5.jpg" alt=""></div>
+		<div class="n6"><img src="img/4/6.jpg" alt=""></div>
+	</div>
+</body>
+</html>

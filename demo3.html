@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>钟表</title>
+	<style>
+		.clock {
+			width:500px;
+			height:500px;
+			margin:100px auto;
+			background-image:url(img/3/bg.png);
+			background-size:cover;
+			border-radius:50%;
+			position:relative;	
+		}
+		.clock > div{position:absolute;left:0;right:0;top:0;bottom:0;margin:auto;}
+		.hour-wrapper{
+			width:50%;height:50%;animation:run 43200s steps(12) infinite;
+		}
+		.hour{width:6px; height:50%;background-color:black;margin:0 auto;}
+		.minute-wrapper{width:60%;height:60%;animation:run 3600s steps(60) infinite;}
+		.minute{width:4px;height:50%;background-color:black;margin:0 auto;}
+		.second-wrapper{width:70%;height:70%;animation:run 60s steps(60) infinite;}
+		.second{width:2px;height:50%;background-color:red;margin:0 auto;}
+		@keyframes run{
+			from{transform:rotateZ(0)}
+			to{transform:rotateZ(360deg)}
+		}
+	</style>
+</head>
+<body>
+	<div class="clock">
+		<div class="hour-wrapper">
+			<div class="hour"></div>
+		</div>
+		<div class="minute-wrapper">
+			<div class="minute"></div>
+		</div>
+		<div class="second-wrapper">
+			<div class="second"></div>
+		</div>
+	</div>
+</body>
+</html>
